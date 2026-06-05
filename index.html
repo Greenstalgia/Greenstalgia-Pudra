@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="style.css">
+    <title>Greenstalgia | Pudra</title>
+    <meta name="description" content="Greenstalgia - авторський блог про вирощування овочів, садові будні та суворий контроль від пухнастої білосніжної інспекторки.">
+    <meta name="keywords" content="сад, город, вирощування овочів, помідори, розсада, коти, Greenstalgia">
+    <meta name="author" content="Богдан">
+
+    <meta property="og:title" content="Greenstalgia | Садові будні та пухнаста інспекція">
+    <meta property="og:description" content="Зазирніть у мій сад! Вирощування томатів, перцю, капусти та щоденний контроль від головного агронома.">
+    <meta property="og:type" content="website">
+    
+    <meta property="og:image" content="https://greenstalgia.github.io/Greenstalgia-Pudra/logo%20cat.png">
+    <link rel="icon" type="image/png" href="product logo.png">
+</head>
+<body>
+    <nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="#" aria-label="Головна сторінка">
+                <img src="product logo.png" alt="Greenstalgia темне лого" class="logo-dark">
+                <img src="product logo white.png" alt="Greenstalgia світле лого" class="logo-white">
+            </a>
+        </div>
+        <button class="nav__menu__btn" id="menu-btn" aria-label="Відкрити меню">
+            <i class="ri-menu-4-fill"></i>
+        </button>
+    </div>
+    <ul class="nav__links" id="nav-links">
+        <li><button id="open-cat-modal" class="nav__link-btn">Про кота</button></li>
+        <li><button id="open-gallery-modal" class="nav__link-btn">Галерея</button></li>
+        <li><button id="open-contact-modal" class="nav__link-btn">Контакти</button></li>
+    </ul>
+    </nav>
+
+    <header>
+        <div class="header__image">
+            <img src="logo cat.png" alt="Біла кішка сидить на камені">
+        </div>
+        <div class="header__content">
+            <p class="header__subtitle">МОЯ ВІРНА ПОМІЧНИЦЯ</p>
+            <h1>Білосніжна пухнаста інспекція</h1>
+            <p>
+                Знайомтеся, це моя кішка - красуня з дивовижними очима. 
+                Її щоденний графік дуже насичений: солодкий сон, 
+                смачна їжа, полювання та, найголовніше, постійний контроль моєї 
+                роботи в саду. Без неї не обходиться жодна грядка!
+            </p>
+            <div class="header__btn">
+                <button id="open-work-modal">Дізнатися Більше</button>
+            </div>
+            <ul class="header__socials">
+                <li>
+                    <a href="https://www.facebook.com/mini.ferma.if" target="_blank" aria-label="Facebook"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@Greenstalgia" target="_blank" aria-label="Youtube"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/mini.ferma.if/" target="_blank" aria-label="Instagram"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+       <dialog id="cat-modal" class="modal">
+        <div class="modal__content">
+            <img src="modalcat.jpg" alt="Біла кішка дивиться вгору" class="modal__image">
+        <h2>Головний агроном</h2>
+        <p>Справжнє ім'я цієї сніжно-білої красуні знає лише вона сама, але на 
+            грядках вона керує всім. Її унікальні очі (одне блакитне, наче ясне літнє небо, 
+            а інше - як тепле сонечко) помічають найменшу травинку, що росте не там, де 
+            треба. Найбільше вона полюбляє влаштовувати засідки прямо посеред грядок з 
+            помідорами або солодко спати в тіні розлогої капусти. Робота в саду йде 
+            набагато веселіше, коли поруч такий уважний пухнастий компаньйон!</p>
+        <button id="close-cat-modal" class="modal__close-btn">Закрити</button>
+        </div>
+       </dialog>
+
+       <dialog id="work-modal" class="modal modal--work">
+        <div class="modal__content">
+            <h2>Мої садові будні</h2>
+
+            <div class="carousel">
+                <div class="carousel__track-container">
+                    <ul class="carousel__track" id="carousel-track">
+                        <li class="carousel__slide">
+                            <img src="garden1.JPG" alt="Зелений та фіолетовий базилік" class="carousel__image">
+                        </li>
+                        <li class="carousel__slide">
+                            <img src="garden2.JPG" alt="Огірки в теплиці" class="carousel__image">
+                        </li>
+                        <li class="carousel__slide">
+                            <img src="garden3.JPG" alt="Огірки та помідори в теплиці" class="carousel__image">
+                        </li>
+                        <li class="carousel__slide">
+                            <img src="garden4.JPG" alt="Картопля на городі" class="carousel__image">
+                        </li>
+                        <li class="carousel__slide">
+                            <img src="garden5.JPG" alt="Томат Great White Blues" class="carousel__image">
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="carousel__button carousel__button--left" id="carousel-prev" aria-label="Попереднє фото">
+                    <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <button class="carousel__button carousel__button--right" id="carousel-next" aria-label="Наступне фото">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+
+            <div class="work__description">
+                <p>
+                    Вирощування овочів — це не просто хобі, а справжня пристрасть. Від перших паростків розсади до збору врожаю 
+                    — кожен етап вимагає уваги. Найбільше задоволення приносить догляд за соковитими помідорами, хрустким перцем 
+                    та розлогою капустою. Робочі будні наповнені прополюванням грядок, підгортанням картоплі та скошуванням трави. 
+                    І все це, звісно, під пильним наглядом моєї білосніжної пухнастої інспекторки!
+                </p>
+            </div>
+
+            <button id="close-work-modal" class="modal__close-btn">Чудова робота!</button>
+        </div>
+       </dialog>
+       <dialog id="gallery-modal" class="modal modal--gallery">
+        <div class="modal__content">
+            <h2>Галерея</h2>
+
+            <div class="gallery__grid">
+                <img src="gallery1.jpg" alt="Кішка спить у ліжку" class="gallery__img">
+                <img src="gallery2.jpg" alt="Кішка заховалася у траві" class="gallery__img">
+                <img src="gallery3.jpg" alt="Кішка лежить біля редиски" class="gallery__img">
+                <img src="gallery4.jpg" alt="Кішка сидить біля квіточки" class="gallery__img">
+                <img src="gallery5.JPG" alt="Кішка і тюльпан" class="gallery__img">
+                <img src="gallery6.jpg" alt="Кішка дивиться зосереджено вгору" class="gallery__img">
+            </div>
+
+            <button id="close-gallery-modal" class="modal__close-btn">Закрити галерею</button>
+        </div>
+       </dialog>
+       <dialog id="contact-modal" class="modal">
+        <div class="modal__content">
+            <h2>Зв'язатися з інспектором</h2>
+            <form action="#" id="contact-form" class="contact__form">
+                <div class="form__group">
+                    <label for="user-name">Як до вас звертатися?</label>
+                    <input type="text" id="user-name" placeholder="Наприклад, Богдан" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="user-message">Ваше повідомлення (пропозиції смаколиків вітаються):</label>
+                    <textarea id="user-message" rows="4" placeholder="Напишіть щось..." required></textarea>
+                </div>
+
+                <button type="submit" class="modal__close-btn">Відправити листа</button>
+            </form>>
+
+            <button id="close-contact-modal" class="nav__link-btn" style="color: #333; margin-top: 1rem; width: 100%;">Закрити</button>
+        </div>
+       </dialog>
+
+       <dialog id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Збільшене фото">
+    </dialog>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Greenstalgia. Усі права захищені та схвалені пухнастою інспекцією.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
